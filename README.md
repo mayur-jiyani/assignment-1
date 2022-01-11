@@ -19,12 +19,16 @@ Store only those repositories which have more than 2000 “stargazers_count”
 
 for that you need to basic understanding of fetching api and store the json data into csv
 
-# project running sertup
+# project setup
 
 Clone this repo and run below command to install all the dependencies.
 
-  npm install
+```bash 
+npm install
+```
 
 Run the below command after cloning repo in terminal
 
-  node data.js
+ ```bash
+ node data.js
+ ```
