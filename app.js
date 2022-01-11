@@ -4,7 +4,7 @@ const dataretrival = require('./data')
 const app = express();
 
 const urlLink = {
-    url: 'https://api.github.com/search/repositories?q=is:public',
+    url: 'https://api.github.com/search/repositories?q=is:public&limi=1',
     headers: {
         "User-Agent": "request"
     }
@@ -17,11 +17,14 @@ app.get('/', (req, res) => {
             return res.send(error);
         }
 
-        const myRes = data.items[0]
-        // const pythonData = myRes.filter((lan) => lan.language === 'JavaScript' && lan.forks >= 200)
+        // const myRes = data
+        // const pythonData = myRes.filter((lan) => lan.language === 'JavaScript')
+
 
         // const forksData = pythonData.filter((key) => key.forks >= 200)
-        res.send(myRes);
+
+
+        // res.send(pythonData);
     })
 
 });
