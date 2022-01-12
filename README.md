@@ -30,5 +30,5 @@ npm install
 Run the below command after cloning repo in terminal
 
  ```bash
- node data.js
+ node app.js
  ```
