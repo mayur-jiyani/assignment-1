@@ -27,7 +27,7 @@ const dataretrival = (urlLink, callback) => {
 
             // storing data in data array if language and forks_count
             response.body.items.forEach(item => {
-                if (item.language === 'JavaScript' && item.forks >= 100) {
+                if (item.language === 'Python' && item.forks >= 200) {
                     dataforks = {
                         name: item.name,
                         lang: item.language,
@@ -42,7 +42,7 @@ const dataretrival = (urlLink, callback) => {
                     data.push(dataforks)
                     // callback(data)
 
-                    if (item.stargazers_count > 500) {
+                    if (item.stargazers_count > 2000) {
                         stargazers = { name: item.name, lang: item.language, description: item.description, html_url: item.html_url, watchers_count: item.watchers_count, stargazers_count: item.stargazers_count, forks_count: item.forks }
                         stargazersData.push(stargazers)
 
